@@ -263,7 +263,7 @@ const Фантастика_aswers = [
   "'Аннигиляция' ** (Annihilation)",
   "'Книга Илая' ** (The Book of Eli)",
 ]
-const Трейлер_answers = [
+const Триллер_answers = [
 "'Семь** (Se7en)",
 "'Остров проклятых** (Shutter Island)",
 "'Психо'** (Psycho)",
@@ -319,7 +319,7 @@ const Трейлер_answers = [
 const keyboard = [
   ['Ужастик', 'Драма'],
   ['Экшн', 'Комедия'],
-  ['Фантастика', 'Трейлер']
+  ['Фантастика', 'Триллер']
 ]
 
 bot.on('text', (msg) => {
@@ -348,8 +348,8 @@ bot.on('text', (msg) => {
   } else if (msg.text === 'Фантастика') {
     const randomId = Math.floor(Math.random() * Фантастика_aswers.length)
     bot.sendMessage(chatId, Фантастика_aswers[randomId])
-  } else if (msg.text === 'Трейлер') {
-    const randomId = Math.floor(Math.random() * Трейлер_answers.length)
-    bot.sendMessage(chatId, Трейлер_answers[randomId])
+  } else if (msg.text === 'Триллер') {
+    const randomId = Math.floor(Math.random() * Триллер_answers.length)
+    bot.sendMessage(chatId, Триллер_answers[randomId])
   }
 })
